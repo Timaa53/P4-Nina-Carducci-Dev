@@ -68,9 +68,19 @@ body {
 }
 
 .picture img {
+	aspect-ratio: 732 / 730;
 	width: 100%;
-
+	height: auto;
 }
+
+#expliciteSizing{
+	height: 100%;
+}
+
+.expliciteSizing{
+	height: 20px;
+}
+
 #about-me {
 	flex: 2
 }
@@ -84,6 +94,7 @@ body {
 	font-weight: 800;
 	font-style: italic;
 	width: 60%;
+	font-size: 16px;
 }
 #about-me p {
 	width: 80%;
@@ -96,6 +107,7 @@ body {
 .title{
 	text-align: center;
 	padding-block: 2em;
+	font-size: 28px;
 }
 .gallery .nav {
 	justify-content: center;
@@ -242,6 +254,13 @@ form textarea {
 input[type="submit"] {
 	background-color: #BEB45A;
 	padding: .5em 1em
+}
+
+h2{
+	font-size: 28px;
+}
+h3{
+	font-size: 24px;
 }
 
 @media all and (max-width: 1180px) {
