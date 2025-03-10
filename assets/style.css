@@ -48,6 +48,7 @@ body {
 	padding-inline: 100px;
 	padding-block: 100px;
 	position: relative;
+	min-height: 800px;
 }
 
 .picture.left::before {
@@ -71,6 +72,7 @@ body {
 	aspect-ratio: 732 / 730;
 	width: 100%;
 	height: auto;
+	min-height: 289px;
 }
 
 #expliciteSizing{
