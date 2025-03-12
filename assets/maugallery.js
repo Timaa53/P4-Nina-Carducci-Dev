@@ -262,3 +262,17 @@
     }
   };
 })(jQuery);
+
+
+setTimeout(() => {
+  const galleryButtons = document.querySelectorAll(".gallery ul li");
+  
+  for(const li of galleryButtons){
+    li.addEventListener ("click", ()=>{
+      for (const button of galleryButtons){
+        button.style.backgroundColor = "transparent";
+      };
+      li.style.backgroundColor = "#BEB45A"
+    })
+  }
+}, 1000);
