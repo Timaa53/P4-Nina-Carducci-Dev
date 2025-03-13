@@ -49,7 +49,7 @@
     navigation: true
   };
   $.fn.mauGallery.listeners = function(options) {
-    $(".gallery-item").on("click", function() {
+    $(".gallery-item").on("click", function() { //////////////////////////////////////event click sur image
       if (options.lightBox && $(this).prop("tagName") === "IMG") {
         $.fn.mauGallery.methods.openLightBox($(this), options.lightboxId);
       } else {
@@ -269,6 +269,7 @@ setTimeout(() => {
   
   for(const li of galleryButtons){
     li.addEventListener ("click", ()=>{
+      console.log("bouton cliqué")
       for (const button of galleryButtons){
         button.style.backgroundColor = "transparent";
       };
