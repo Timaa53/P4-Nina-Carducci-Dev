@@ -18,6 +18,17 @@ body {
 	align-items: center;
 }
 
+.carousel-control-prev{
+	background: black !important; 
+	opacity: 0.3 !important;
+	width: 50px;
+}
+.carousel-control-next{
+	background: black!important; 
+	opacity: 0.3 !important;
+	width: 50px;
+}
+
 .top-header .name {
 	font-size: 26px;
 }
@@ -141,6 +152,9 @@ body {
 	object-fit: cover;
 	padding: .5em;
 }
+.nav-item .active-tag{
+	background-color: #BEB45A;
+}
 .mg-prev, .mg-next {
 	width: 30px;
 	height: 30px;
@@ -257,6 +271,26 @@ form textarea {
 input[type="submit"] {
 	background-color: #BEB45A;
 	padding: .5em 1em
+}
+
+#messageNom, #messageEmail, #messageMessage{
+	position: absolute;
+	left: 47%;
+	width: 200px;
+}
+
+#spanForm{
+	color: red;
+}
+
+#messageNom{
+	top: 33%;
+}
+#messageEmail{
+	top: 46%;
+}
+#messageMessage{
+	top: 62%;
 }
 
 h2{
