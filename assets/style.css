@@ -278,19 +278,22 @@ input[type="submit"] {
 	left: 47%;
 	width: 200px;
 }
-
 #spanForm{
 	color: red;
 }
 
 #messageNom{
-	top: 33%;
+	top: 30%;
 }
 #messageEmail{
-	top: 46%;
+	top: 42%;
 }
 #messageMessage{
-	top: 62%;
+	top: 57%;
+}
+
+#messageSend{
+	height: 50px;
 }
 
 h2{

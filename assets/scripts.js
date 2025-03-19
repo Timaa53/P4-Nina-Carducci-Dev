@@ -18,16 +18,14 @@ $(document).ready(function() {
 
 // Formulaire de contact
 
-//Modification dynaimique du bouton
-
-
 //Validation des champs requis
 //NOM
+let messageNom = document.getElementById("messageNom");
 let inputNom = document.getElementById("nom")
 inputNom.addEventListener("input",function(){
     let nomValue = this.value;
     let nomPattern = /^[a-zA-ZÀ-ÿ' -]{2,}$/;
-    let messageNom = document.getElementById("messageNom");
+    
 
     if (nomValue.trim() === ""){
         messageNom.textContent = "";
@@ -47,11 +45,12 @@ inputNom.addEventListener("input",function(){
 });
 
 //EMAIL
+let messageEmail = document.getElementById("messageEmail");
 let inputEmail = document.getElementById("email");
 inputEmail.addEventListener("input",function(){
     let emailValue = this.value;
     let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    let messageEmail = document.getElementById("messageEmail");
+    
 
     if (emailValue.trim() === ""){
         messageEmail.textContent = "";
@@ -71,9 +70,8 @@ inputEmail.addEventListener("input",function(){
 });
 
 //MESSAGE
-let textAreaMessage = document.getElementById("message");
-
 let messageMessage = document.getElementById("messageMessage");
+let textAreaMessage = document.getElementById("message");
 textAreaMessage.addEventListener("input", function(){
     let messageValue = this.value;
 
@@ -95,25 +93,34 @@ textAreaMessage.addEventListener("input", function(){
     vérificationForm();
 })
 
-
-const form = document.getElementById("form");
-form.addEventListener("submit",function(e){
-    e.preventDefault();
-
-    const messageSend = document.createElement("p");
-    messageSend.textContent = "✅ Votre message à bien été envoyé. Je reviens vers vous au plus vite! Vérifiez régulièrement votre boite mail. A bientôt !";
-    form.appendChild(messageSend);
-
-    form.reset();
-    messageMessage.textContent = "";
-    
-})
-
-
+//Modification dynamique du bouton + validation formulaire
+//Modifs bouton cliquable si form complet et valide
 function vérificationForm(){
+    const submitInput = document.getElementById("envoyer");
+
     if (inputNom.classList.contains("valid") && inputEmail.classList.contains("valid") && textAreaMessage.classList.contains("valid")){
         submitInput.disabled = false
     } else{
         submitInput.disabled = true
     }
 };
+
+
+//Validation formulaire
+const form = document.getElementById("form");
+form.addEventListener("submit",function(e){
+    e.preventDefault();
+
+    const messageSend = document.getElementById("messageSend");
+    messageSend.textContent = "✅ Votre message à bien été envoyé. Je reviens vers vous au plus vite! Vérifiez régulièrement votre boite mail. A bientôt !";
+    form.appendChild(messageSend);
+
+    form.reset();
+    messageMessage.textContent = "";
+    textAreaMessage.classList.remove("valid");
+    messageEmail.textContent = "";
+    inputEmail.classList.remove("valid");
+    messageNom.textContent = "";
+    inputNom.classList.remove("valid");
+    vérificationForm();
+});
