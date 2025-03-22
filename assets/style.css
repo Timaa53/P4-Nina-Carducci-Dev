@@ -81,10 +81,10 @@ body {
 }
 
 .picture img {
-	aspect-ratio: 732 / 730;
+	aspect-ratio: auto;
 	width: 100%;
 	height: auto;
-	min-height: 289px;
+	/* min-height: 289px; */
 }
 
 #expliciteSizing{
@@ -152,7 +152,7 @@ body {
 	object-fit: cover;
 	padding: .5em;
 }
-.nav-item .active-tag{
+ .nav-item .active-tag{ /* pour boutons filtres de la gallery */
 	background-color: #BEB45A;
 }
 .mg-prev, .mg-next {
