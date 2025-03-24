@@ -163,7 +163,7 @@
         }
       });
       let activeTag = $(".tags-bar span.active-tag").data("images-toggle");
-      let imagesCollection = [];
+      let imagesCollection = []; // tableau gallerie
       if (activeTag === "all") {
         $(".item-column").each(function() {
           if ($(this).children("img").length) {
